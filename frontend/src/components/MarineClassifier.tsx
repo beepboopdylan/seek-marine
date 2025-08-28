@@ -96,7 +96,7 @@ const MarineClassifier: React.FC = () => {
   const cameraInputRef = useRef<HTMLInputElement>(null);
   const galleryInputRef = useRef<HTMLInputElement>(null);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string;
+  const API_BASE_URL = import.meta.env.VITE_API_BASE as string;
 
   const resetAll = useCallback((): void => {
     setSelectedFile(null);
