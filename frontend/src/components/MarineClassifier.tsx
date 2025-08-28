@@ -175,8 +175,7 @@ const MarineClassifier: React.FC = () => {
 
   return (
     <div className="flex justify-center min-h-screen bg-gray-100">
-      <div className="relative w-full max-w-sm bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex flex-col min-h-screen">
-
+      <div className="relative w-[384px] max-w-[384px] h-[850px] bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex flex-col">
         <header className="flex-shrink-0 px-6 pt-8 pb-4">
           <div className="text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-3xl mb-4 backdrop-blur-sm">
@@ -292,10 +291,6 @@ const MarineClassifier: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-center text-white/80 space-y-2"
             >
-              <p className="text-lg">Ready to identify marine life?</p>
-              <p className="text-sm text-blue-100">
-                Use the camera button below to take a photo or select from your gallery
-              </p>
             </motion.div>
           )}
         </main>
