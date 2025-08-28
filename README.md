@@ -5,7 +5,7 @@ Ever seen a marine creature and wondered what it is? **Seek Marine** will let yo
 **Seek Marine** is a full-stack AI-powered marine species identifier that lets you take or upload a photo and instantly receive a prediction. Inspired by iNaturalist’s Seek app, this project is designed for educational and environmental awareness, and currently supports 23 animal species. Eventually, I want to turn this into a tool for deep-sea creature identification!
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/73a77c1b-4ae5-417c-896d-ec391b189f5e" width="30%" />
+  <img src="https://github.com/user-attachments/assets/99442e00-bddc-42af-bee8-876d6bac6aec" width="30%" />
   <img src="https://github.com/user-attachments/assets/2d38c45a-ba2f-4b7b-9e83-e1a2adb3c8f7" width="30%" />
   <img src="https://github.com/user-attachments/assets/1f3ad0b6-40d1-469d-9836-81a6b0afbe65" width="30%" />
 </div>
