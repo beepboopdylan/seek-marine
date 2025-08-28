@@ -2,7 +2,7 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from tensorflow.keras.models import load_model
-from backend.utils import preprocess_image, decode_prediction
+from utils import preprocess_image, decode_prediction
 from pillow_heif import register_heif_opener
 import numpy as np
 import asyncio
