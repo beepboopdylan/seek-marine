@@ -9,7 +9,6 @@ import {
   Loader2,
   AlertCircle,
   RefreshCw,
-  CheckCircle2,
   Image
 } from "lucide-react";
 
@@ -17,11 +16,6 @@ interface PredictionResponse {
   prediction: string;
   confidence?: number;
   error?: string;
-}
-
-interface TopkResult {
-  label: string;
-  score: number;
 }
 
 type SpeciesType =
@@ -84,10 +78,8 @@ const SUPPORTED: SpeciesType[] = [
 
 
 const MarineClassifier: React.FC = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [prediction, setPrediction] = useState<string | null>(null);
-  const [confidence, setConfidence] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [showSpecies, setShowSpecies] = useState<boolean>(false);
@@ -99,10 +91,8 @@ const MarineClassifier: React.FC = () => {
   const API_BASE_URL = import.meta.env.VITE_API_BASE as string;
 
   const resetAll = useCallback((): void => {
-    setSelectedFile(null);
     setPreview(null);
     setPrediction(null);
-    setConfidence(null);
     setError(null);
     setShowResults(false);
     setLoading(false);
@@ -110,7 +100,6 @@ const MarineClassifier: React.FC = () => {
 
   const handleFileSelect = useCallback((file: File): void => {
     if (file && file.type.startsWith('image/')) {
-      setSelectedFile(file);
       setError(null);
       setPrediction(null);
       setShowResults(false);
@@ -146,7 +135,6 @@ const MarineClassifier: React.FC = () => {
 
       if (response.ok) {
         setPrediction(data.prediction);
-        setConfidence(data.confidence || null);
         setShowResults(true);
       } else {
         setError(data.error || 'Prediction failed. Please try again.');
@@ -175,7 +163,7 @@ const MarineClassifier: React.FC = () => {
 
   return (
     <div className="flex justify-center min-h-screen bg-gray-100">
-      <div className="relative w-[384px] max-w-[384px] h-[850px] bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex flex-col">
+      <div className="relative w-[384px] max-w-[384px] h-[860px] bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex flex-col">
         <header className="flex-shrink-0 px-6 pt-8 pb-4">
           <div className="text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-3xl mb-4 backdrop-blur-sm">
